@@ -1,3 +1,7 @@
+# x is number to get y (is interpolated)
+# xs is number list which is provided
+# ys is number list which is provided
+
 def lagrangeInterpolation(x, xs, ys) :
     ls = []
     for xj in xs :
