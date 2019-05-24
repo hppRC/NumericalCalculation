@@ -1,9 +1,9 @@
-#x is number list which is provide
-#y is number list which is provide
+#x is number list which is provided
+#y is number list which is provided
 #var is number list which you want to plot
 #this function return float number list which is interpolated based on var
 
-def splineInterpolation(x, y, var):
+def splineInterpolation(var, x, y):
     j = 0
     N = len(x)-1
     a,b,c,d = splineInterpolationCalc(x,y)

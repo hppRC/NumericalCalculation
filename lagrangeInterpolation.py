@@ -2,24 +2,24 @@
 # xs is number list which is provided
 # ys is number list which is provided
 
-def lagrangeInterpolation(x, xs, ys) :
+def lagrangeInterpolation(va, x, y) :
     ls = []
-    for xj in xs :
+    for xj in x :
         numerator = 1
         denumerator = 1
 
-        for xi in xs:
+        for xi in x:
             if (xi == xj) :
                 continue
             else :
-                numerator *= x - xi 
+                numerator *= va - xi 
                 denumerator *= xj - xi 
         ls.append(numerator/denumerator)
-    return sum([li * yi for li, yi in zip(ls, ys)])
+    return sum([li * yi for li, yi in zip(ls, y)])
 
 
 if __name__ == "__main__":
-    xs = [i for i in range(-5, 6)]
-    ys = [1/(1 + 25*i*i) for i in range(-5, 6)]
-    dots = [lagrangeInterpolation(i*0.1, xs, ys) for i in range(-5, 6)]
+    x = [i for i in range(-5, 6)]
+    y = [1/(1 + 25*i*i) for i in range(-5, 6)]
+    dots = [lagrangeInterpolation(i*0.1, x, y) for i in range(-5, 6)]
     print(dots)
