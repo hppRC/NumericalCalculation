@@ -16,3 +16,10 @@ def lagrangeInterpolation(x, xs, ys) :
                 denumerator *= xj - xi 
         ls.append(numerator/denumerator)
     return sum([li * yi for li, yi in zip(ls, ys)])
+
+
+if __name__ == "__main__":
+    xs = [i for i in range(-5, 6)]
+    ys = [1/(1 + 25*i*i) for i in range(-5, 6)]
+    dots = [lagrangeInterpolation(i*0.1, xs, ys) for i in range(-5, 6)]
+    print(dots)
