@@ -23,7 +23,6 @@ def bisectionMethod(f, left, right, eps=1e-15):
             elif (f(left) > 0) and (f(right) < 0):
                 right = c
 
-
 if __name__ == "__main__":
     print(bisectionMethod(lambda x: x**2 - 1, 0, 2))
     print(bisectionMethod(lambda x: x**2 - 1, 0, -2))
