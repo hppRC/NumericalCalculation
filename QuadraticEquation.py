@@ -5,4 +5,6 @@ def quadraticEquation(a, b, c):
 
     return (x1, x2)
 
-
+if __name__ == "__main__":
+    print(quadraticEquation(1, 2, 1))
+    print(quadraticEquation(2, 10, 7))
